@@ -1,9 +1,0 @@
-      - name: Commit changes
-        env:
-          TOKEN: ${{ secrets.TOKEN }}
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add disabled.json
-          git commit -m "Update disabled.json" || echo "No changes to commit"
-          git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }}.git || echo "No changes to push"

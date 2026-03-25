@@ -21,5 +21,5 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add disabled.json
-          git commit -m "Update disabled.json"
-          git push
+          git commit -m "Update disabled.json" || echo "No changes to commit"
+          git push || echo "No changes to push"
